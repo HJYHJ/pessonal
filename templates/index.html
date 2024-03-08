@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+ <h1>YUKINOSHITA YUKINO</h1>
+ <ul style="float: left">
+     {% for i in li %}
+     <h1>{{ i.name}}</h1>
+     <ol>{{ i.hair }}</ol>
+     <ol>{{ i.eyes }}</ol>
+     <ol>{{ i.form }}</ol>
+     <ol>{{ i.born }}</ol>
+         {% for j in i.habbits %}
+              <ol>{{ j }}</ol>
+             {% endfor %}
+     <ol>{{ habbitls }}</ol>
+     {% endfor %}
+        
+ </ul>
+ {% load static %}
+{# <img src="{% static 'images/Yukino1.png' %}" alt="yukino" width="550" height="1024">#}
+ <img src="{{ STATIC_URL }}image/Yukino1.png" alt="yukino" width="550" height="1024"  >
+<br>
+{# <img src="{{ STATIC_URL }}images/Yukino2.jpg" alt="yukino2">#}
+</body>
+</html>
